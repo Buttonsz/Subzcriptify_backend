@@ -3,5 +3,8 @@
  * @Entity @Table(name="user_subscriptions")
  */
 class User_Subscription {
-
+    /**
+     * @Id @GeneratedValue @Column(type="integer")
+     */
+    protected $id;
 }
