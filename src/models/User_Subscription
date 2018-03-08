@@ -1,0 +1,7 @@
+<?php
+/**
+ * @Entity @Table(name="user_subscriptions")
+ */
+class User_Subscription {
+
+}
