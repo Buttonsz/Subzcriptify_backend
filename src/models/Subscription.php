@@ -9,12 +9,16 @@ class Subscription {
     protected $id;
 
     /**
-     * @OneToMany(targetEntity="category", mappedBy="id")
+     * @OneToMany(targetEntity="Category", mappedBy="id")
      * @var Category
      */
     protected $category = null;
 
-
+    /**
+     * @OneToMany(targetEntity="Type", mappedBy="id")
+     * @var Type
+     */
+    protected $type = null;
 
     /**
      * @Column(type="string")
@@ -59,5 +63,25 @@ class Subscription {
         $this->colorHex = $hexColor;
     }
 
+    public function getCategory() {
+        return $this->category;
+    }
 
+    public function setCategory(Category $category) {
+        $this->category = $category;
+    }
+
+    public function getType() {
+        return $this->type;
+    }
+
+    public function setType(Type $type) {
+        $this->type = $type;
+    }
+
+    public function __construct(string $name, string $iconUrl, string $hexColor) {
+        $this->name = $name;
+        $this->iconUrl = $iconUrl;
+        $this->colorHex = $hexColor;
+    }
 }

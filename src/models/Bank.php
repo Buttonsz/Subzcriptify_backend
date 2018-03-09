@@ -25,5 +25,19 @@ class Bank {
      */
     protected $user = null;
 
+    public function getName() {
+        return $this->name;
+    }
 
+    public function setName(string $name) {
+        $this->name = $name;
+    }
+
+    public function getUser() {
+        return $this->user;
+    }
+
+    public function setUser(User $user) {
+        $this->user = $user;
+    }
 }
