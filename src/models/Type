@@ -1,0 +1,7 @@
+<?php
+/**
+ * @Entity @Table(name="types")
+ */
+class Type {
+    
+}

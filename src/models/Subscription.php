@@ -14,6 +14,8 @@ class Subscription {
      */
     protected $category = null;
 
+
+
     /**
      * @Column(type="string")
      */

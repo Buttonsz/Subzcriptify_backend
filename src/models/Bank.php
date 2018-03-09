@@ -19,6 +19,11 @@ class Bank {
      */
     protected $currency;
 
+    /**
+     * @OneToMany(targetEntity="User", mappedBy="id")
+     * @var User
+     */
+    protected $user = null;
 
-    protected $user;
+
 }
