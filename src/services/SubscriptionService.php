@@ -1,19 +1,19 @@
 <?php
-require_once "bootstrap.php";
+
+use Doctrine\ORM\EntityManagerInterface;
 
 class SubscriptionService {
 
-    public function __construct($entityManager) {
+    private $entityManager;
+
+    public function __construct(EntityManagerInterface $entityManager) {
         $this->entityManager = $entityManager;
     }
 
-    protected $entityManager;
-
     public function createSubscription(string $name, string $iconUrl, string $hexColor) {
         $subscription = new Subscription($name, $iconUrl, $hexColor);
-        $entityManager->persist($subscription);
+        $this->entityManager->persist($subscription);
+        $this->entityManager->flush();
     }
-
-
 
 }
