@@ -9,14 +9,12 @@ class Subscription {
     protected $id;
 
     /**
-     * @OneToMany(targetEntity="Category", mappedBy="id")
-     * @var Category
+     * @ManyToOne(targetEntity="Category")
      */
     protected $category = null;
 
     /**
-     * @OneToMany(targetEntity="Type", mappedBy="id")
-     * @var Type
+     * @ManyToOne(targetEntity="Type")
      */
     protected $type = null;
 
@@ -75,7 +73,7 @@ class Subscription {
         return $this->type;
     }
 
-    public function setType(Type $type) {
+    public function setType(php $type) {
         $this->type = $type;
     }
 

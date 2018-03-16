@@ -1,5 +1,5 @@
 <?php
-/**#
+/**
  * @Entity @Table(name="banks")
  */
 class Bank {
@@ -20,8 +20,7 @@ class Bank {
     protected $currency;
 
     /**
-     * @OneToMany(targetEntity="User", mappedBy="id")
-     * @var User
+     * @ManyToOne(targetEntity="User")
      */
     protected $user = null;
 

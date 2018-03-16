@@ -1,10 +1,11 @@
 <?php
+
 /**
  * @Entity @Table(name="types")
  */
 class Type {
     /**
-     * @Id @GeneratedValue @Column(type="integer")
+     * @Id @Column(type="integer") @GeneratedValue
      */
     protected $id;
 

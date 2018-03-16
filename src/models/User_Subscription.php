@@ -9,20 +9,17 @@ class User_Subscription {
     protected $id;
 
     /**
-     * @OneToMany(targetEntity="Subscription", mappedBy="id")
-     * @var Subscription
+     * @ManyToOne(targetEntity="Subscription")
      */
     protected $subscription;
 
     /**
-     * @OneToMany(targetEntity="Bank", mappedBy="id")
-     * @var Bank
+     * @ManyToOne(targetEntity="Bank")
      */
     protected $bank;
 
     /**
-     * @OneToMany(targetEntity="User", mappedBy="id")
-     * @var User
+     * @ManyToOne(targetEntity="User")
      */
     protected $user;
 
